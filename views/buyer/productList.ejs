@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Product Cards</title>
+    <link href="navbar.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <label class="logo">
+            <a href="/homepage">ThriftMate</a>
+        </label>
+        <ul class="lower">
+            <li><a href="/homepage" class="active">Home</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+
+    </nav>
+    
+    <div>-</div>
+
+    <% if(product.length > 0){
+        for(let i=0; i < product.length; i++){ %>
+            <div class="sec">
+                <div class="products">
+                    <div class="card">
+                        
+                        <div class="img"><img src="images/<%= i+1 %>.png" alt="<%= product[i].name %>"></div>
+                        <div class="desc"><%= product[i].condition %></div>
+                        <div class="title"><%= product[i].category %></div>
+                        <div class="boxes">
+                            <div class="price"><%= product[i].price %></div>
+                            <a class='btn' href="/addToCart?id=<%= product[i].id %>">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }} 
+        else {%>
+            <div class="noProduct">
+                        <p id="noProd">NO PRODUCT AVAILABLE RIGHT NOW</p>
+            </div>
+        <%}%>
+    </div>
+</body>
+</html>
+
+
+ <!-- <% if(product.length > 0){
+    for(let i=0; i < product.length; i++){ %>
+    <div class="card">
+        <img src="images/<%= i+1 %>.png" alt="Picture">
+        <div class="title"><%= product[i].name %></div>
+        <div class="category"><%= product[i].category %></div>
+        <div class="price"><%= product[i].price %></div>
+        <div class="condition"><%= product[i].condition %></div>
+        <a href="/addToCart?id=<%= product[i].id %>">Buy now</a>
+    </div>
+    <% }} 
+else {%>
+    <div class="noProduct">
+                <p id="noProd">NO PRODUCT AVAILABLE RIGHT NOW</p>
+    </div>
+<%}%>  -->

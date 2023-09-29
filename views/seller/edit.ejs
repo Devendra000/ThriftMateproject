@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Seller</title>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <form action="" method="post"  enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id='name' name="name" value="<%= user.name%>" required><br><br>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="<%= user.address %>" placeholder="Your address" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" value='<%= user.phone%>' placeholder="Your phone number" required><br><br>
+
+        <img src="../sellerImages/<%= user.image.filename %>" width="80px", height="90px">
+        <label for="picture">Upload profile pic:</label>
+            <input type="file" name="image" id="picture">
+        
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
