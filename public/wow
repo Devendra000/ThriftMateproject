@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<h1>public</h1>
+    <div class="container hidden">
+
+        <div class="signup hidden">
+            <h1 class ="Title">Sign Up</h1>
+            <form method="post" action="/signup">
+                <div class="input-group">
+                    <div class="input-field" class="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name" name="name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password"placeholder="Password" name="password" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password"placeholder="Confirm Password" name="confirm" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="radio" name="userType" value="buyer" checked>Buyer
+                        <input type="radio" name="userType" value="seller" >Seller
+                    </div>
+                    
+                    <br><br>
+                    <p>Already have an account? <a id="gotologin">Log In</a></p>
+
+                </div>
+
+                    <div class="btn-field">
+                        <button type="submit" class="signsup">Sign Up</button>
+                    </div>
+
+            </form>
+        </div>
+
+        <div class="login hidden">
+            <h1 class ="Title">Log In</h1>
+            <form method="post" action="/login" class="loginform">
+                <div class="input-group">
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" class="email" name="email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" class="password" name="password" required>
+                    </div>
+
+                    <p>Forgot password? <a class="goto">Click here</a></p><br><br>
+                    <p>Don't have an account? <a id="gotosignup">Sign Up</a></p>
+                    <p>Click here to <a href="/verifyEmail">Verify Email</a></p>
+                </div>
+
+                <div class="btn-field">
+                    <button type="submit" class="logsin">Log In</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="forgot hidden">
+
+            <h1 class ="Title">Forgot Password</h1>
+
+            <form action="/forgot" method="post">
+                <div class="input-group">
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" class="email" name="email" required>
+                    </div>
+
+                    <div class="btn-field">
+                        <form method="post" action="#">
+                        <button type="submit" class="forgotpassword">submit</button></form>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" id="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <label class="logo">
+            <a href="#">ThriftMate</a>
+        </label>
+
+        <ul class="lower">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="#">About us </a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href='/seller'>Be a seller</a></li>
+            <li><a id="loginbtn">Login</a></li>
+            <li><a id="signupbtn">Signup</a></li>
+        </ul>
+
+     </nav>
+
+    <div id="navigation">
+     <div class="home">
+        <div class="main-text">
+            <ul class="upper">
+                <li><a href="#">CLOTHES</a></li>
+                <li><a href="#">BAGS</a></li>
+                <li><a href="#">ACCESSORIES</a></li>
+                <li><a href="#">SNEAKERS</a></li>
+                <li><a href="#">UTENSILS</a></li>
+                <li><a href="#">BOOK</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <form class="search" method="post" action="/search">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+                <input type="text" placeholder="Search for the products" name="value">
+                <button type="submit">Search</button>
+            </form>
+            
+        </div>
+     </div>
+
+    <section class="content">
+        <h1>Buy and Sell products easily</h1>
+        <p>Reduce Reuse Recycle</p>
+        <a href="#trend"><button type="button">Shop now</button></a>
+    </section>
+
+
+    <h1 class="pheading" id="trend">Top Trending</h1>
+
+    <div class="sec">
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/1.png" alt=""></div>
+                <div class="desc">Used</div>
+                <div class="title">Heels</div>
+                <div class="boxes">
+                    <div class="price">Rs.1000</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/2.png" alt=""></div>
+                <div class="desc">Like New</div>
+                <div class="title">Books</div>
+                <div class="boxes">
+                    <div class="price">Rs.300</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+     
+
+     
+     
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/3.png" alt=""></div>
+                <div class="desc">Not Used</div>
+                <div class="title">Dress</div>
+                <div class="boxes">
+                    <div class="price">Rs.700</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+   
+
+     
+    
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/4.png" alt=""></div>
+                <div class="desc">Like New</div>
+                <div class="title">Handbag</div>
+                <div class="boxes">
+                    <div class="price">Rs.1200</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+     
+
+     
+     
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/5.png" alt=""></div>
+                <div class="desc">Brand New</div>
+                <div class="title">Sneakers</div>
+                <div class="boxes">
+                    <div class="price">Rs.4500</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+    
+
+     
+    
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/6.png" alt=""></div>
+                <div class="desc">Used</div>
+                <div class="title">Handbag</div>
+                <div class="boxes">
+                    <div class="price">Rs.900</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+     
+
+     
+     
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/7.png" alt=""></div>
+                <div class="desc">Brand New</div>
+                <div class="title">Accessories</div>
+                <div class="boxes">
+                    <div class="price">Rs.400</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/7.png" alt=""></div>
+                <div class="desc">Brand New</div>
+                <div class="title">Accessories</div>
+                <div class="boxes">
+                    <div class="price">Rs.400</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+        
+     
+        <div class="products">
+            <div class="card">
+               <div class="img"><img src="images/8.png" alt=""></div>
+                <div class="desc">Like New</div>
+                <div class="title">Accessories</div>
+                <div class="boxes">
+                    <div class="price">Rs.650</div>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="signup.js"></script>
+</body>
+</html> 

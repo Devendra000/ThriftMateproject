@@ -1,0 +1,139 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul.lower {
+    list-style: none;
+    display: flex;
+}
+
+nav ul.lower li {
+    margin-right: 20px;
+}
+
+nav ul.lower li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul.lower li a.active {
+    text-decoration: underline;
+}
+
+/* Profile section styles */
+.border2 {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.mini1 {
+    flex: 1;
+    padding: 20px;
+}
+
+.mini1 .side1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.mini1 .name1 {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.mini1 .phone1,
+.mini1 .des1 {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #777;
+}
+
+.mini1 a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.option1 {
+    flex: 2;
+    padding: 20px;
+}
+
+#profile1 {
+    list-style: none;
+}
+
+#profile1 li {
+    margin-bottom: 10px;
+}
+
+#profile1 a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul.lower {
+        margin-top: 10px;
+    }
+
+    .border2 {
+        flex-direction: column;
+    }
+
+    .mini1,
+    .option1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .option1 {
+        margin-top: 20px;
+    }
+}
